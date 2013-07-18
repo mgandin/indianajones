@@ -1,5 +1,6 @@
 package com.octo.livecoding;
 
+import org.fest.assertions.Assertions;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,6 +10,6 @@ public class ResultControllerTest {
     @Test public void should_generate_json() {
         ResultController resultController = new ResultController();
         List<Result> results = resultController.generateJson();
-        Assert.assertEquals(ResultFixture.generateResults(),results);
+        Assertions.assertThat(results).isEqualTo(ResultFixture.generateResults());
     }
 }

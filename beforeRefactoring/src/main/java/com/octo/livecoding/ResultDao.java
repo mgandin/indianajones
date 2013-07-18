@@ -25,7 +25,9 @@ public class ResultDao {
     	PreparedStatement preparedStatement = null;
     	ResultSet resultSet = null;
 		try {
-			connection = DriverManager.getConnection("jdbc:h2:file:~/db/h2test.db",
+            String url = ResultDao.class.getClassLoader().getResource("./db").getPath();
+
+            connection = DriverManager.getConnection("jdbc:h2:file:" + url + "/h2test.db",
 					"sa", "");
 			preparedStatement = connection.prepareStatement("Select departement,manager,netprofit,operatingexpense,year,turnover from result");
 	    	
