@@ -70,14 +70,7 @@
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat6-maven-plugin</artifactId>
-                <configuration>
-                    <server>indie</server>
-                    <username>tomcat</username>
-                    <password>s3cret</password>
-                    <port>8080</port>
-                    <path>/indianajones</path>
-                    <systemProperties />
-                </configuration>
+		<version>2.1</version>>
             </plugin>
         </plugins>
     </build>
