@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.085" errors="0" skipped="0" tests="1" name="com.octo.livecoding.ResultControllerTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="23.6-b03"/>
+    <property name="user.country.format" value="FR"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring"/>
+    <property name="java.runtime.version" value="1.7.0_10-ea-b09"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/surefire/surefirebooter3859457796246699040.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/hx/jn_2xlyn6bdcp7rtt67v9fz00000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/gandinmathieu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="surefire.test.class.path" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/test-classes:/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/classes:/Users/gandinmathieu/.m2/repository/junit/junit/4.4/junit-4.4.jar:/Users/gandinmathieu/.m2/repository/com/h2database/h2/1.3.168/h2-1.3.168.jar:/Users/gandinmathieu/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/gandinmathieu/.m2/repository/org/mockito/mockito-all/1.9.0/mockito-all-1.9.0.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1.jar:/Users/gandinmathieu/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.7.1/jackson-core-asl-1.7.1.jar:/Users/gandinmathieu/.m2/repository/org/easytesting/fest-assert/1.4/fest-assert-1.4.jar:/Users/gandinmathieu/.m2/repository/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.8.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/gandinmathieu"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="gandinmathieu"/>
+    <property name="java.class.path" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/test-classes:/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/classes:/Users/gandinmathieu/.m2/repository/junit/junit/4.4/junit-4.4.jar:/Users/gandinmathieu/.m2/repository/com/h2database/h2/1.3.168/h2-1.3.168.jar:/Users/gandinmathieu/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/gandinmathieu/.m2/repository/org/mockito/mockito-all/1.9.0/mockito-all-1.9.0.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE.jar:/Users/gandinmathieu/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1.jar:/Users/gandinmathieu/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.7.1/jackson-core-asl-1.7.1.jar:/Users/gandinmathieu/.m2/repository/org/easytesting/fest-assert/1.4/fest-assert-1.4.jar:/Users/gandinmathieu/.m2/repository/org/easytesting/fest-util/1.1.6/fest-util-1.1.6.jar:"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="/Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/surefire/surefirebooter3859457796246699040.jar /Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/surefire/surefire785824387877004071tmp /Users/gandinmathieu/IdeaProjects/github/indianajones/beforeRefactoring/target/surefire/surefire5198447973985359090tmp"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_10-ea"/>
+    <property name="java.ext.dirs" value="/Users/gandinmathieu/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="localRepository" value="/Users/gandinmathieu/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.053" classname="com.octo.livecoding.ResultControllerTest" name="should_generate_json"/>
+</testsuite>
