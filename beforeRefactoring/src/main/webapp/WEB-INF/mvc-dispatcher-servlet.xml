@@ -12,8 +12,8 @@
 	<context:component-scan base-package="com.octo.livecoding" />
 	<mvc:annotation-driven />
     <context:annotation-config/>
-    <bean id="resultDao" class="com.octo.livecoding.ResultDao"/>
+    <bean id="resultDao" class="fr.mga.livecoding.ResultDao"/>
 
-    <bean id="resultService" class="com.octo.livecoding.ResultService"/>
+    <bean id="resultService" class="fr.mga.livecoding.ResultService"/>
 
 </beans>

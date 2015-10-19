@@ -1,7 +1,6 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
 
 import org.fest.assertions.Assertions;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;

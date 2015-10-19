@@ -1,4 +1,6 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
+
+import fr.mga.livecoding.Result;
 
 import java.util.ArrayList;
 import java.util.List;

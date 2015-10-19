@@ -1,4 +1,4 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
 
 public class Result {
 
