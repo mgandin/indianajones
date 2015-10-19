@@ -4,7 +4,7 @@
 
     <servlet>
         <servlet-name>results</servlet-name>
-        <servlet-class>com.octo.livecoding.View</servlet-class>
+        <servlet-class>fr.mga.livecoding.View</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 

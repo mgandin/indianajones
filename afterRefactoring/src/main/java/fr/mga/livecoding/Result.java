@@ -1,10 +1,8 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
 
 public class Result {
 
-    public static final String ALERT_NET_PROFIT_TOO_LOW = "Alert : Net Profit too low";
-    public static final String ALERT_TOO_MUCH_NOTES = "Alert : Too much notes";
-    private String departement;
+	private String departement;
 	private String manager;
 	private Double netProfit;
 	private Double operatingExpense;
@@ -13,6 +11,23 @@ public class Result {
     private int year;
     private int turnover;
     private String underKpiMessage;
+
+    public String getUnderKpiMessage() {
+        return underKpiMessage;
+    }
+
+    public void setUnderKpiMessage(String underKpiMessage) {
+        this.underKpiMessage = underKpiMessage;
+    }
+
+    public String getTooMuchExpenseMessage() {
+        return tooMuchExpenseMessage;
+    }
+
+    public void setTooMuchExpenseMessage(String tooMuchExpenseMessage) {
+        this.tooMuchExpenseMessage = tooMuchExpenseMessage;
+    }
+
     private String tooMuchExpenseMessage;
 
 
@@ -102,54 +117,40 @@ public class Result {
         return result;
     }
 
-
-    public String generateHeader() {
-        String pageXml = "\t\t<result>\n";
-        pageXml += "\t\t\t<lob>" + getDepartement() + "</lob>\n";
-        pageXml += "\t\t\t<manager>" + getManager() + "</manager>\n";
-        pageXml += "\t\t\t<net>" + (getNetProfit() / 100) + "</net>\n";
-        if(getUnderKpi()) {
-            pageXml += "\t\t\t<alertNet>" + ALERT_NET_PROFIT_TOO_LOW + "</alertNet>\n";
-        }
-        pageXml += "\t\t\t<operatingExpense>" + (getOperatingExpense() / 100)
-                + "</operatingExpense>\n";
-        if (getHasTooMuchExpense()) {
-            pageXml += "\t\t\t<alertExpense>" + ALERT_TOO_MUCH_NOTES + "</alertExpense>\n";
-        }
-        pageXml += "\t\t\t<year>" + getYear() + "</year>\n";
-        pageXml += "\t\t\t<turnover>" + getTurnover() + "</turnover>\n";
-        pageXml += "\t\t</result>\n";
-        return pageXml;
-    }
-
     public void handleExpense(int maxExpense) {
         if(getOperatingExpense() >= maxExpense) {
             setHasTooMuchExpense(true);
-            setTooMuchExpenseMessage(ALERT_TOO_MUCH_NOTES);
+            setTooMuchExpenseMessage("ALERT EXPENSE");
         }
     }
 
     public void handleProfit(int minProfit) {
         if(getNetProfit() < minProfit) {
             setUnderKpi(true);
-            setUnderKpiMessage(ALERT_NET_PROFIT_TOO_LOW);
+            setUnderKpiMessage("ALERT KPI");
         }
     }
 
-    public String getUnderKpiMessage() {
-        return underKpiMessage;
+    public boolean is(String department) {
+        return getDepartement() == department;
     }
 
-    public void setUnderKpiMessage(String underKpiMessage) {
-        this.underKpiMessage = underKpiMessage;
-    }
-
-    public String getTooMuchExpenseMessage() {
-        return tooMuchExpenseMessage;
-    }
-
-    public void setTooMuchExpenseMessage(String tooMuchExpenseMessage) {
-        this.tooMuchExpenseMessage = tooMuchExpenseMessage;
+    public void calculate() {
+        if (!is("Media") && !is("Bank") && !is("Indus")) {
+            handleProfit(5000);
+            handleExpense(5000);
+        } else {
+            if (is("Media")) {
+                handleProfit(7500);
+                handleExpense(4200);
+            }
+            if(is("Bank")) {
+                handleProfit(10000);
+            }
+            if(is("Indus")) {
+                handleExpense(1000);
+            }
+        }
     }
 }
 

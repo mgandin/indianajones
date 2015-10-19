@@ -1,4 +1,4 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ public class ResultDao {
 	}
 
     public List<Result> findAll() {
-        List<Result> results = new ArrayList<Result>();
+        List<Result> results = new ArrayList<>();
         try {
             Class.forName("org.h2.Driver").newInstance();
         } catch (InstantiationException e) {
@@ -31,20 +31,23 @@ public class ResultDao {
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            connection = DriverManager.getConnection("jdbc:h2:file:~/db/h2test.db",
+            String url = ResultDao.class.getClassLoader().getResource("./db").getPath();
+
+            connection = DriverManager.getConnection("jdbc:h2:file:" + url + "/h2test.db",
                     "sa", "");
-            preparedStatement = connection.prepareStatement("Select departement,manager,netprofit,operatingexpense,year,turnover from result");
+            preparedStatement = connection
+                    .prepareStatement("Select departement,manager,netprofit,operatingexpense,year,turnover from result");
 
             resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 Result result = new Result();
                 result.setDepartement(resultSet.getString("departement"));
                 result.setManager(resultSet.getString("manager"));
                 result.setNetProfit(resultSet.getDouble("netprofit"));
                 result.setOperatingExpense(resultSet.getDouble("operatingexpense"));
-result.setYear(resultSet.getInt("year"));
-result.setTurnover(resultSet.getInt("turnover"));
+                result.setYear(resultSet.getInt("year"));
+                result.setTurnover(resultSet.getInt("turnover"));
                 results.add(result);
             }
 

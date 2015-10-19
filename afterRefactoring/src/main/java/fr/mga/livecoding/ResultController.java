@@ -1,4 +1,4 @@
-package com.octo.livecoding;
+package fr.mga.livecoding;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,15 +13,15 @@ import java.util.List;
 @RequestMapping("/results")
 public class ResultController {
 
+    private final ResultService resultService;
+
     @Autowired
-    private ResultService resultService;
+    public ResultController(ResultService resultService) {
+        this.resultService = resultService;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody List<Result> generateJson() {
         return resultService.getResults();
-    }
-
-    public void setResultService(ResultService resultService) {
-        this.resultService = resultService;
     }
 }
