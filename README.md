@@ -8,7 +8,7 @@ Vous avez deux web services qui se lance en tapant la commande :
 `mvn clean install tomcat6:run`
 
 ## Premier refactoring
-refactorer le premier web service accessible à l'URL [http://localhost:8080/indianajones/rest/results] en affichant le turnover qui manque au rapport.
+refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/rest/results> en affichant le turnover qui manque au rapport.
 Le XML affiché a cette forme là :
 ```xml
 <report>
@@ -49,7 +49,7 @@ Veillez à rendre le code le plus propre possible avec un maximum de tests unita
 Vous avez à peu près 15 minutes ...
 
 ## Deuxième refactoring
-refactorer le premier web service accessible à l'URL [http://localhost:8080/indianajones/json/results] en affichant des élements supplémentaires.
+refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/json/results> en affichant des élements supplémentaires.
 Le JSON affiché a cette forme là :
 ```javascript
 [{"manager":"Mathieu","departement":"Media","operatingExpense":4000.0,"netProfit":4000.0,"year":2013,"underKpiMessage":true,"tooMuchExpenseMessage":true,"turnover":9}]
