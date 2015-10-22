@@ -2,13 +2,13 @@
 
 Ce code est un exercice pour apprendre à faire évoluer fonctionnellement du code Legacy en prenant le temps d'écrire des tests unitaires et de refactorer.
 
-Vous allez avoir besoin d'avoir Maven 3 et un JDK 8 pour cet exercice
+Vous avez besoin de Maven 3 et d'un JDK 8 pour cet exercice
 
 Vous avez deux web services qui se lance en tapant la commande :
 `mvn clean install tomcat6:run`
 
 ## Premier refactoring
-refactorer le premier web service accessible à l'URL http://localhost:8080/indianajones/rest/results en affichant le turnover qui manque au rapport.
+refactorer le premier web service accessible à l'URL (http://localhost:8080/indianajones/rest/results) en affichant le turnover qui manque au rapport.
 Le XML affiché a cette forme là :
 ```xml
 <report>
@@ -49,8 +49,8 @@ Veillez à rendre le code le plus propre possible avec un maximum de tests unita
 Vous avez à peu près 15 minutes ...
 
 ## Deuxième refactoring
-refactorer le premier web service accessible à l'URL http://localhost:8080/indianajones/json/results en affichant des élements supplémentaires.
-Le JSON affiché à cette forme là :
+refactorer le premier web service accessible à l'URL (http://localhost:8080/indianajones/json/results) en affichant des élements supplémentaires.
+Le JSON affiché a cette forme là :
 ```javascript
 [{"manager":"Mathieu","departement":"Media","operatingExpense":4000.0,"netProfit":4000.0,"year":2013,"underKpiMessage":true,"tooMuchExpenseMessage":true,"turnover":9}]
 ```
