@@ -1,6 +1,6 @@
 # Kata 'Indiana Jones et le Temple du code Legacy'
 
-(http://media2.giphy.com/media/MS0fQBmGGMaRy/giphy.gif)
+![alt text](http://media2.giphy.com/media/MS0fQBmGGMaRy/giphy.gif)
 
 Ce code est un exercice pour apprendre à faire évoluer fonctionnellement du code Legacy en prenant le temps d'écrire des tests unitaires et de refactorer.
 
