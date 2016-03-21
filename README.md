@@ -10,7 +10,11 @@ Vous avez deux web services qui se lance en tapant la commande :
 `mvn clean install tomcat6:run`
 
 ## Premier refactoring
-refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/rest/results> en affichant le turnover qui manque au rapport.
+Pour commencer ce premier refactoring, faites un checkout avec la commande git suivante :
+```
+git checkout -b exo1 step0
+```
+Refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/rest/results> en affichant le turnover qui manque au rapport.
 Le XML affiché a cette forme là :
 ```xml
 <report>
@@ -49,9 +53,17 @@ Il doit maintenant ressembler à ça :
 
 Veillez à rendre le code le plus propre possible avec un maximum de tests unitaires (vous pouvez utiliser Mockito).
 Vous avez à peu près 15 minutes ...
+Une solution possible se trouve en exécutant la commande suivante :
+```
+git checkout step1
+```
 
 ## Deuxième refactoring
-refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/json/results> en affichant des élements supplémentaires.
+Pour commencer ce premier refactoring, faites un checkout avec la commande git suivante :
+```
+git checkout -b exo2 step1
+```
+Refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/json/results> en affichant des élements supplémentaires.
 Le JSON affiché a cette forme là :
 ```javascript
 [{"manager":"Mathieu","departement":"Media","operatingExpense":4000.0,"netProfit":4000.0,"year":2013,"underKpiMessage":true,"hasTooMuchExpense":true,"turnover":9}]
@@ -62,4 +74,7 @@ Il doit maintenant ressembler à ça :
 ```
 Encore une fois, veillez à rendre le code le plus propre possible avec un maximum de tests unitaires (vous pouvez utiliser Mockito).
 Et vous avez encore à peu près 15 minutes ...
-
+Une solution possible se trouve en exécutant la commande suivante :
+```
+git checkout step2
+```
