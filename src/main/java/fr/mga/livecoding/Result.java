@@ -98,7 +98,23 @@ public class Result {
         return result;
     }
 
-    
+    public String toXml() {
+        String pageXml = "\t\t<result>\n";
+        pageXml += "\t\t\t<lob>" + getDepartement() + "</lob>\n";
+        pageXml += "\t\t\t<manager>" + getManager() + "</manager>\n";
+        pageXml += "\t\t\t<net>" + (getNetProfit() / 100) + "</net>\n";
+        if(getUnderKpiMessage()) {
+            pageXml += "\t\t\t<alertNet>Alert : Net Profit too low</alertNet>\n";
+        }
+        pageXml += "\t\t\t<operatingExpense>" + (getOperatingExpense() / 100)
+                + "</operatingExpense>\n";
+        if (getTooMuchExpenseMessage()) {
+            pageXml += "\t\t\t<alertExpense>Alert : Too much notes</alertExpense>\n";
+        }
+        pageXml += "\t\t\t<turnover>" + getTurnover() + "</turnover>\n";
+        pageXml += "\t\t</result>\n";
+        return pageXml;
+    }
 }
 
 

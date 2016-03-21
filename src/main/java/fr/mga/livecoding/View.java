@@ -14,7 +14,7 @@ public class View extends HttpServlet {
 			response)
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-		PageGenerator pageGenerator = new PageGenerator();
+		PageGenerator pageGenerator = new PageGenerator(new ResultService());
 		out.println(pageGenerator.generate());
 	}
 }
