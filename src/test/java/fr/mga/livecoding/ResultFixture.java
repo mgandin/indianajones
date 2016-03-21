@@ -8,8 +8,19 @@ import java.util.List;
 public class ResultFixture {
     public static List<Result> generateResults() {
         Result result = generateResult(4000.0,4000.0,"Mathieu","Media",9,2013);
-        List<Result> results = new ArrayList<Result>();
+        List<Result> results = new ArrayList<>();
         results.add(result);
+        return results;
+    }
+
+    public static List<Result> generateResultsWithAlert() {
+        List<Result> results = new ArrayList<>();
+        results.add(generateResult(4.0,4000000.0,"Mathieu","Media",9,2013));
+        results.add(generateResult(4.0,4000000.0,"Mathieu","Bank",9,2013));
+        results.add(generateResult(4.0,4000000.0,"Mathieu","Indus",9,2013));
+        results.add(generateResult(4.0,4000000.0,"Mathieu","Mobile",9,2013));
+        results.add(generateResult(4.0,4000000.0,"Mathieu","UX",9,2013));
+
         return results;
     }
 

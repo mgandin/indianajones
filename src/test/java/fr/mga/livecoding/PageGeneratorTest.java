@@ -78,7 +78,7 @@ public class PageGeneratorTest {
 
     @Test
     public void should_generate_all_results_as_xml() {
-        PageGenerator pageGenerator = new PageGenerator(new ResultService());
+        PageGenerator pageGenerator = new PageGenerator(new ResultService(new ResultDao()));
         String generatedXml = pageGenerator.generate();
         assertThat(generatedXml).isEqualTo(expectedXml);
     }

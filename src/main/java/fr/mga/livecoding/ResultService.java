@@ -1,55 +1,33 @@
 package fr.mga.livecoding;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ResultService {
 
     private String frame;
 
+    private ResultDao resultDao;
+
+    @Autowired
+    public ResultService(ResultDao resultDao) {
+        this.resultDao = resultDao;
+    }
+
     public List<Result> getResults() {
-        List<Result> resultList = ResultDao.query();
-        List<Result> results = new ArrayList<Result>();
+        List<Result> resultList = resultDao.findAll();
+        List<Result> results = new ArrayList<>();
         if(resultList.size() != 0) {
             int maxYear = 0;
             int minYear = 9999;
-            for (int i = 0; i < resultList.size(); i++) {
-                Result result = resultList.get(i);
-                if (result.getDepartement() != "Media" && result.getDepartement() != "Bank" && result.getDepartement() != "Indus") {
-                    if(result.getNetProfit() < 5000) {
-                        result.setUnderKpiMessage(true);
-                    }
-                    if(result.getOperatingExpense() >= 5000) {
-                        result.setTooMuchExpenseMessage(true);
-                    }
-                    results.add(result);
-                } else {
-                    if (result.getDepartement() == "Media") {
-                        if(result.getNetProfit() < 7500) {
-                            result.setUnderKpiMessage(true);
-                        }
-                        if(result.getOperatingExpense() >= 4200) {
-                            result.setTooMuchExpenseMessage(true);
-                        }
-                        results.add(result);
-                    }
-                    if(result.getDepartement() == "Bank") {
-                        if(result.getNetProfit() < 10000) {
-                            result.setUnderKpiMessage(true);
-                        }
-                        results.add(result);
-                    }
-                    if(result.getDepartement() == "Indus") {
-                        if(result.getOperatingExpense() >= 1000) {
-                            result.setTooMuchExpenseMessage(true);
-                        }
-                        results.add(result);
-                    }
-                }
-
-                maxYear = Math.max(maxYear, result.getYear());
-                minYear = Math.min(minYear, result.getYear());
-            }
+            results = resultList.stream()
+                    .map(Result::compute)
+                    .collect(Collectors.toList());
+            maxYear = Math.max(maxYear, results.get(0).getYear());
+            minYear = Math.min(minYear, results.get(0).getYear());
             frame = minYear+ " - " + maxYear;
         }
         return results;

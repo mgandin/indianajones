@@ -11,7 +11,12 @@ import java.util.List;
 public class ResultDao {
 
 	public static List<Result> query() {
-		List<Result> results = new ArrayList<Result>();
+		ResultDao resultDao = new ResultDao();
+		return resultDao.findAll();
+	}
+
+	public List<Result> findAll() {
+		List<Result> results = new ArrayList<>();
 		try {
 			Class.forName("org.h2.Driver").newInstance();
 		} catch (InstantiationException e) {
@@ -21,18 +26,18 @@ public class ResultDao {
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
-    	Connection connection = null;
-    	PreparedStatement preparedStatement = null;
-    	ResultSet resultSet = null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
 		try {
             String url = ResultDao.class.getClassLoader().getResource("./db").getPath();
 
             connection = DriverManager.getConnection("jdbc:h2:file:" + url + "/h2test.db",
 					"sa", "");
 			preparedStatement = connection.prepareStatement("Select departement,manager,netprofit,operatingexpense,year,turnover from result");
-	    	
+
 			resultSet = preparedStatement.executeQuery();
-	    	
+
 	    	while(resultSet.next()) {
 	    		Result result = new Result();
 	    		result.setDepartement(resultSet.getString("departement"));
@@ -43,12 +48,12 @@ public class ResultDao {
                 result.setTurnover(resultSet.getInt("turnover"));
 	    		results.add(result);
 	    	}
-	    	
+
 	    	return results;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		} finally {
-			
+
 			try {
 				if(resultSet != null)
 					resultSet.close();
@@ -60,8 +65,6 @@ public class ResultDao {
 				throw new RuntimeException(e);
 			}
 		}
-    	
-    	
 	}
 
 }

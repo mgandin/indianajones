@@ -1,7 +1,8 @@
 package fr.mga.livecoding;
 
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.joining;
 
 public class PageGenerator {
 
@@ -22,7 +23,7 @@ public class PageGenerator {
             pageXml += generateResultHeader();
             pageXml += results.stream()
                     .map(Result::toXml)
-                    .collect(Collectors.joining());
+                    .collect(joining());
             pageXml += generateFooterResult();
         }
         pageXml += generateFooter();

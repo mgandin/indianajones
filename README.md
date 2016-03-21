@@ -54,11 +54,11 @@ Vous avez à peu près 15 minutes ...
 refactorer le premier web service accessible à l'URL <http://localhost:8080/indianajones/json/results> en affichant des élements supplémentaires.
 Le JSON affiché a cette forme là :
 ```javascript
-[{"manager":"Mathieu","departement":"Media","operatingExpense":4000.0,"netProfit":4000.0,"year":2013,"underKpiMessage":true,"tooMuchExpenseMessage":true,"turnover":9}]
+[{"manager":"Mathieu","departement":"Media","operatingExpense":4000.0,"netProfit":4000.0,"year":2013,"underKpiMessage":true,"hasTooMuchExpense":true,"turnover":9}]
 ```
 Il doit maintenant ressembler à ça :
 ```javascript
-[{"manager":"Mathieu","year":2013,"underKpiMessage":"ALERT KPI","tooMuchExpenseMessage":"ALERT EXPENSE","departement":"Media","netProfit":4000.0,"operatingExpense":4000.0,"underKpi":true,"hasTooMuchExpense":true,"turnover":9}]
+[{"manager":"Mathieu","year":2013,"underKpiMessage":"ALERT KPI","hasTooMuchExpense":"ALERT EXPENSE","departement":"Media","netProfit":4000.0,"operatingExpense":4000.0,"underKpi":true,"hasTooMuchExpense":true,"turnover":9}]
 ```
 Encore une fois, veillez à rendre le code le plus propre possible avec un maximum de tests unitaires (vous pouvez utiliser Mockito).
 Et vous avez encore à peu près 15 minutes ...
